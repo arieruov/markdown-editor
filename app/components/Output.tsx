@@ -12,6 +12,9 @@ export default function Output() {
             <Markdown
                 remarkPlugins={[remarkGfm]}
                 components={{
+                    p: ({ children }) => (
+                        <p className="mb-4 whitespace-pre-wrap">{children}</p>
+                    ),
                     h1: ({ children }) => (
                         <h1 className="mb-4 text-3xl font-bold md:text-4xl">
                             {children}
